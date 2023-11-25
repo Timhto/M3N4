@@ -9,7 +9,7 @@
 
 * DESENVOLVIMENTO FULL STACK- TURMA 23.3 -9003
 * Disciplina: RPG0017  - Vamos Integrar Sistemas.
-* Semestre Letivo: 2023.2
+* Semestre Letivo: 2023.3
 * Repositorio Git: https://github.com/Timhto/M3N4.git
 
 <hr>
