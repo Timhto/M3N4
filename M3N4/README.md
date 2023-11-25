@@ -10,28 +10,18 @@
 * DESENVOLVIMENTO FULL STACK- TURMA 23.3 -9003
 * Disciplina: RPG0017  - Vamos Integrar Sistemas.
 * Semestre Letivo: 2023.2
-* Repositorio Git: https://github.com/Gregdev22/Missao-4-Mundo-3
+* Repositorio Git: https://github.com/Timhto/M3N4.git
 
 <hr>
 
-* [EMERSON GREGORIO ALVES](https://github.com/Gregdev22) - MATRICULA: 2022.0908.4986
+* [EVERTON GOMES](https://github.com/Timhto/M3N4.git) - MATRICULA: 202209113455
 <hr>
  <h1 align="center"> Missão Prática | Nível 4 | Mundo 3 </h1>
  <h2 align="left" > Implementação de sistema cadastral com interface Web, baseado nas tecnologias deServlets, JPA e JEE. </h2> 
  <h3>Procedimento 1: Camadas de Persistência e Controle </h3>
  <h3>Procedimento 2: Interface Cadastral com Servlet e JSPs </h3>
  <h3>Procedimento 3: Melhorando o Design da Interface </h3>
- <hr>
 
- <h2> :clipboard: Objetivos da Prática </h2>
-
-* Implementar persistência com base em JPA.
-* Implementar regras de negócio na plataforma JEE, através de EJBs.
-* Implementar sistema cadastral Web com   base em Servlets e JSPs.
-* Utilizar a biblioteca Bootstrap para melhoria do design.
-* No final do exercício, o aluno terá criado todos os elementos necessários para exibição e entrada de dados na plataforma Java Web, tornando-se capacitado para
-lidar com contextos reais de aplicação.
-<hr>
 
 <h2> Códigos </h2>
 
@@ -58,10 +48,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import cadastroee.model.Produto;
 
 
-/**
- *
- * @author grego
- */
+
 
 @WebServlet("/ServletProduto")
 public class ServletProduto extends HttpServlet {
@@ -69,15 +56,7 @@ public class ServletProduto extends HttpServlet {
     @EJB
     ProdutoFacadeLocal facade;
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+  
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -103,40 +82,21 @@ public class ServletProduto extends HttpServlet {
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+    
     @Override
     public String getServletInfo() {
         return "Short description";
@@ -144,17 +104,12 @@ public class ServletProduto extends HttpServlet {
 
 }
 
-```
+
 <br>
 
 [Procedimento 2: Interface Cadastral com Servlet e JSPs](https://github.com/Gregdev22/Missao-4-Mundo-3/tree/main/Procedimento%202)
 
-* ServletProduto.java
-```java
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
+
 package cadastroee.servlets;
 
 import cadastroee.controller.ProdutoFacadeLocal;
@@ -169,10 +124,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import cadastroee.model.Produto;
 
 
-/**
- *
- * @author grego
- */
+
 
 @WebServlet("/ServletProduto")
 public class ServletProduto extends HttpServlet {
@@ -180,15 +132,7 @@ public class ServletProduto extends HttpServlet {
     @EJB
     ProdutoFacadeLocal facade;
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+  
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -214,54 +158,28 @@ public class ServletProduto extends HttpServlet {
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+    
     @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 
 }
-```
 
-* ServletProdutoFC.java
-```java
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package cadastroee.servlets;
 
 import cadastroee.controller.ProdutoFacadeLocal;
@@ -276,10 +194,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author grego
- */
+
 
 @WebServlet(name="ServletProdutoFC", urlPatterns = {"/ServletProdutoFC"})
 public class ServletProdutoFC extends HttpServlet {
@@ -299,15 +214,7 @@ public class ServletProdutoFC extends HttpServlet {
    
 
      
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
               String acao = request.getParameter("acao"); 
@@ -349,29 +256,14 @@ public class ServletProdutoFC extends HttpServlet {
     }}
     
     
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -432,26 +324,15 @@ public class ServletProdutoFC extends HttpServlet {
                     }          
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+   
     @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 
 }
-```
 
-* ProdutoLista.jsp
-```jsp
-<%-- 
-    Document   : ProdutoLista
-    Created on : 3 de out. de 2023, 21:16:09
-    Author     : grego
---%>
+
 
 
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -524,15 +405,8 @@ public class ServletProdutoFC extends HttpServlet {
         </div>
     </body>
 </html>
-```
 
-* ProdutoDados.jsp
-```jsp
-<%-- 
-    Document   : ProdutoDados
-    Created on : 5 de out. de 2023, 14:26:07
-    Author     : grego
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -586,15 +460,9 @@ public class ServletProdutoFC extends HttpServlet {
 ```
 <br>
 
-[Procedimento 3: Melhorando o Design da Interface](https://github.com/Gregdev22/Missao-4-Mundo-3/tree/main/Procedimento%203)
+[Procedimento 3: Melhorando o Design da Interface](https://github.com/Timhto/M3N4.git)
 
-* ProdutoLista.jsp
-```jsp
-<%-- 
-    Document   : ProdutoLista
-    Created on : 3 de out. de 2023, 21:16:09
-    Author     : grego
---%>
+
 
 
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -671,13 +539,7 @@ public class ServletProdutoFC extends HttpServlet {
 </html>
 ```
 
-* ProdutoDados.jsp
-```jsp
-<%-- 
-    Document   : ProdutoDados
-    Created on : 5 de out. de 2023, 14:26:07
-    Author     : grego
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -751,50 +613,8 @@ public class ServletProdutoFC extends HttpServlet {
     </body>
 </html>
 ```
-<hr>
-<h1>Resultados: </h1>
-:triangular_flag_on_post: Procedimento 1: https://github.com/Gregdev22/Missao-4-Mundo-3/tree/main/Procedimento%201
 
 
-https://github.com/Gregdev22/Missao-4-Mundo-3/assets/103840468/2a3c6228-e493-4ab9-aa20-371e317d4f29
-
-
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%201/resultados%20proc1/1%20proc1%20missao%204.png" alt="resultado 1" width="1280" height="360">
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%201/resultados%20proc1/2%20proc1%20missao%204.png" alt="resultado 2" width="1280" height="360">
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%201/resultados%20proc1/3%20proc%201%20missao%204.png" alt="resultado 3" width="1280" height="360">
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%201/resultados%20proc1/4%20proc%201%20missao%204.png" alt="resultado 4" width="1280" height="360">
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%201/resultados%20proc1/5%20proc%201%20missao%204.png" alt="resultado 5" width="1280" height="360">
-<h2> Teste do Servlet: http://localhost:8080/CadastroEE-war/ServletProduto </h2>
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%201/resultados%20proc1/6%20proc%201%20missao%204.png" alt="resultado 6" width="1280" height="360">
-<br>
-:triangular_flag_on_post: Procedimento 2: https://github.com/Gregdev22/Missao-4-Mundo-3/tree/main/Procedimento%202
-
-
-https://github.com/Gregdev22/Missao-4-Mundo-3/assets/103840468/c7a35e84-ac42-4dc6-b901-5df44fd29c98
-
-<h2> Listar os produtos com a chamada para o endereço seguinte: http://localhost:8080/CadastroEE-war/ServletProdutoFC?acao=listar </h2>
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%202/resultados%20proc2/1%20proc%202%20missao%204.png" alt="resultado 1" width="640" height="360">
-
-<h2> Efetuar uma inclusão a partir do link da tela de listagem </h2>
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%202/resultados%20proc2/2%20proc2%20missao%204.png" alt="resultado 2" width="640" height="360">
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%202/resultados%20proc2/3%20proc%202%20missao%204.png" alt="resultado 3" width="640" height="360">
-
-<h2> Efetuar uma alteração a partir do link dinâmico da listagem </h2>
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%202/resultados%20proc2/4%20proc2%20missao%204.png" alt="resultado 4" width="640" height="360">
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%202/resultados%20proc2/5%20proc2%20missao%204.png" alt="resultado 5" width="640" height="360">
-
-<h2> Efetuar uma exclusão a partir do link dinâmico da listagem </h2>
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%202/resultados%20proc2/6%20proc2%20missao%204.png" alt="resultado 6" width="640" height="360">
-<br>
-
-:triangular_flag_on_post: Procedimento 3: https://github.com/Gregdev22/Missao-4-Mundo-3/tree/main/Procedimento%203
-
-<h2> Modificar as características de ProdutoLista.jsp e ProdutoDados.jsp por meio das bibliotecas do framework Bootstrap  </h2>
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%203/Resultados%20proc3/1%20proc3%20missao%204.png" alt="resultado 1" width="640" height="360">
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%203/Resultados%20proc3/2%20proc3%20missao%204.png" alt="resultado 2" width="640" height="360">
-<img src="https://github.com/Gregdev22/Missao-4-Mundo-3/blob/main/Procedimento%203/Resultados%20proc3/3%20proc3%20missao%204.png" alt="resultado 3" width="640" height="360">
-
-<hr>
 
 <h1>Análise e Conclusão</h1>
 <ul>
